@@ -1,0 +1,17 @@
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\IG.Infraestructure.csproj.AssemblyReference.cache
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\IG.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\IG.Infraestructure.AssemblyInfoInputs.cache
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\IG.Infraestructure.AssemblyInfo.cs
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\IG.Infraestructure.csproj.CoreCompileInputs.cache
+D:\Freelancer\IgNet\IG.Infraestructure\bin\Release\net9.0\IG.Infraestructure.deps.json
+D:\Freelancer\IgNet\IG.Infraestructure\bin\Release\net9.0\IG.Infraestructure.dll
+D:\Freelancer\IgNet\IG.Infraestructure\bin\Release\net9.0\IG.Infraestructure.pdb
+D:\Freelancer\IgNet\IG.Infraestructure\bin\Release\net9.0\IG.Core.dll
+D:\Freelancer\IgNet\IG.Infraestructure\bin\Release\net9.0\IG.Domain.dll
+D:\Freelancer\IgNet\IG.Infraestructure\bin\Release\net9.0\IG.Domain.pdb
+D:\Freelancer\IgNet\IG.Infraestructure\bin\Release\net9.0\IG.Core.pdb
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\IG.Infra.6EC79A11.Up2Date
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\IG.Infraestructure.dll
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\refint\IG.Infraestructure.dll
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\IG.Infraestructure.pdb
+D:\Freelancer\IgNet\IG.Infraestructure\obj\Release\net9.0\ref\IG.Infraestructure.dll

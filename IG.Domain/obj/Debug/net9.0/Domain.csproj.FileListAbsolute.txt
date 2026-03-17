@@ -1,0 +1,15 @@
+D:\Freelancer\IgNet\Domain\bin\Debug\net9.0\Domain.deps.json
+D:\Freelancer\IgNet\Domain\bin\Debug\net9.0\Domain.dll
+D:\Freelancer\IgNet\Domain\bin\Debug\net9.0\Domain.pdb
+D:\Freelancer\IgNet\Domain\bin\Debug\net9.0\Core.dll
+D:\Freelancer\IgNet\Domain\bin\Debug\net9.0\Core.pdb
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\Domain.csproj.AssemblyReference.cache
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\Domain.csproj.Up2Date
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\Domain.dll
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\refint\Domain.dll
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\Domain.pdb
+D:\Freelancer\IgNet\Domain\obj\Debug\net9.0\ref\Domain.dll

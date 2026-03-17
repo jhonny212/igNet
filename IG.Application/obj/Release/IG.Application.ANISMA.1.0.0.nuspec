@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>IG.Application.ANISMA</id>
+    <version>1.0.0</version>
+    <title>Test</title>
+    <authors>IG.Application</authors>
+    <description>Test</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net9.0">
+        <dependency id="IG.Infraestructure" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="AutoMapper" version="16.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="2.3.9" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Freelancer\IgNet\IG.Application\bin\Release\net9.0\IG.Application.dll" target="lib\net9.0\IG.Application.dll" />
+  </files>
+</package>

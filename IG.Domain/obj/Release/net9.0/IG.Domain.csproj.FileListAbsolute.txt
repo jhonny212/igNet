@@ -1,0 +1,15 @@
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\IG.Domain.csproj.AssemblyReference.cache
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\IG.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\IG.Domain.AssemblyInfoInputs.cache
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\IG.Domain.AssemblyInfo.cs
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\IG.Domain.csproj.CoreCompileInputs.cache
+D:\Freelancer\IgNet\IG.Domain\bin\Release\net9.0\IG.Domain.deps.json
+D:\Freelancer\IgNet\IG.Domain\bin\Release\net9.0\IG.Domain.dll
+D:\Freelancer\IgNet\IG.Domain\bin\Release\net9.0\IG.Domain.pdb
+D:\Freelancer\IgNet\IG.Domain\bin\Release\net9.0\IG.Core.dll
+D:\Freelancer\IgNet\IG.Domain\bin\Release\net9.0\IG.Core.pdb
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\IG.Domain.csproj.Up2Date
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\IG.Domain.dll
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\refint\IG.Domain.dll
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\IG.Domain.pdb
+D:\Freelancer\IgNet\IG.Domain\obj\Release\net9.0\ref\IG.Domain.dll
