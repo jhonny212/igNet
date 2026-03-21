@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Response;
 using IG.Application.Core.Request;
-using IG.Application.Domain.Entities;
+using IG.Application.Domain.Interfaces;
 
 namespace IG.Application.Services.Crud
 {
     public partial class CrudService<TEntity, PK, CreateReq, CreateRes, UpdateReq, UpdateRes>
         where CreateReq : BaseRequest
         where UpdateReq : BaseRequest
-        where TEntity : BaseEntity<PK>
+        where TEntity : class, IBaseEntity<PK>
     {
         public async Task<Response<bool>> DeleteAsync(
             PK id,
@@ -32,13 +32,14 @@ namespace IG.Application.Services.Crud
             }
             catch (Exception ex)
             {
-                return new Response<bool>
-                {
-                    Success = false,
-                    Message = "Error al eliminar",
-                    ServerMessage = ex.Message,
-                    Data = false,
-                };
+                throw new Exception(ex.Message, ex);
+                //return new Response<bool>
+                //{
+                //    Success = false,
+                //    Message = "Error al eliminar",
+                //    ServerMessage = ex.Message,
+                //    Data = false,
+                //};
             }
         }
     }

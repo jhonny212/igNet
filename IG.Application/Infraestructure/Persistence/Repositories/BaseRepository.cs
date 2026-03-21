@@ -1,4 +1,3 @@
-using IG.Application.Domain.Entities;
 using IG.Application.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -6,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Storage;
 namespace IG.Application.Infraestructure.Persistence.Repositories
 {
     public class BaseRepository<T, PK> : IBaseRepository
-        where T : BaseEntity<PK>
+        where T : class, IBaseEntity<PK>
     {
         public readonly DbContext _context;
         public readonly DbSet<T> _dbSet;
 
-        public BaseRepository(DbContext context, DbSet<T> dbSet)
+        public BaseRepository(DbContext context)
         {
             _context = context;
-            _dbSet = dbSet;
+            _dbSet = context.Set<T>(); //dbSet;
         }
 
         public async Task<IDbContextTransaction> BeginTransactionAsync(

@@ -9,7 +9,7 @@
     <PackageId>NALWING.CRUD</PackageId>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.2</Version>
+    <Version>1.0.7</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\readme.md">

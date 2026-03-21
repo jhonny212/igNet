@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IG.Application.Core.Request;
+using IG.Application.Domain.Interfaces;
 
 namespace IG.Application.Core.Interfaces.Crud
 {
@@ -12,5 +13,5 @@ namespace IG.Application.Core.Interfaces.Crud
             IDeleteService<PK>
         where CreateReq : BaseRequest
         where UpdateReq : BaseRequest
-        where TEntity : Domain.Entities.BaseEntity<PK> { }
+        where TEntity : class, IBaseEntity<PK> { }
 }

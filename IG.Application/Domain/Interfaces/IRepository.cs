@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IG.Application.Domain.Entities;
-using IG.Application.Domain.Interfaces;
 
 namespace IG.Application.Domain.Interfaces
 {
@@ -13,7 +11,7 @@ namespace IG.Application.Domain.Interfaces
             IDeleteRepository<T, PK>,
             IReadRepository<T, PK>,
             IBaseRepository
-        where T : BaseEntity<PK> { }
+        where T : class, IBaseEntity<PK> { }
 }
 //IDeleteRepository<T, PK>,
 //IReadRepository<T, PK>,

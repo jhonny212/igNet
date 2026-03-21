@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using IG.Application.Core.Extensions;
 using IG.Application.Core.Interfaces.Crud;
 using IG.Application.Core.Request;
+using IG.Application.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IG.Application.App.Controllers
@@ -21,7 +22,7 @@ namespace IG.Application.App.Controllers
     > : ControllerBase
         where CreateReq : BaseRequest
         where UpdateReq : BaseRequest
-        where TEntity : Domain.Entities.BaseEntity<PK>
+        where TEntity : class, IBaseEntity<PK>
     {
         protected readonly ICrudService<
             TEntity,

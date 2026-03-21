@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using IG.Application.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Query;
 
 namespace IG.Application.Domain.Interfaces
 {
     public interface ISaveRepository<T, PK>
-        where T : BaseEntity<PK>
+        where T : IBaseEntity<PK>
     {
         Task<T> CreateAsync(
             T entity,

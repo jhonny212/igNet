@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using IG.Application.Domain.Entities;
+using IG.Application.Core.Interfaces;
 
 namespace IG.Application.Domain.Interfaces
 {
     public interface IReadRepository<T, PK>
-        where T : BaseEntity<PK>
+        where T : IBaseEntity<PK>
     {
         Task<T?> FindByIdAsync(
             PK id,
@@ -31,9 +31,12 @@ namespace IG.Application.Domain.Interfaces
         //    CancellationToken cancellationToken = default
         //);
 
-        Task<List<T>> Search(
+        IQueryable<T> Search(
+            out int totalPages,
+            out int totalRecords,
             string? searchTerm,
             bool tracking = false,
+            IPagedAndSort? paged = null,
             IEnumerable<Expression<Func<T, object>>>? includes = null,
             CancellationToken cancellationToken = default,
             params Expression<Func<T, string>>[] columns

@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using IG.Application.Domain.Entities;
 using IG.Application.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace IG.Application.Infraestructure.Persistence.Repositories
 {
     public partial class Repository<T, PK>
-        where T : BaseEntity<PK>
+        where T : class, IBaseEntity<PK>
     {
         public async Task<T> DeleteAsync(
             T entity,

@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using IG.Application.Domain.Entities;
 
 namespace IG.Application.Domain.Interfaces
 {
     public interface IDeleteRepository<T, PK>
-        where T : BaseEntity<PK>
+        where T : IBaseEntity<PK>
     {
         Task<T> DeleteAsync(
             T entity,

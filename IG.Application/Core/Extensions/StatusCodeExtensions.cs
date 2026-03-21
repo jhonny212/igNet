@@ -30,9 +30,9 @@ namespace IG.Application.Core.Extensions
             );
         }
 
-        public static ObjectResult HandleResult<T>(
+        public static ObjectResult HandleResult(
             this ControllerBase controller,
-            Response<T> response
+            BaseResponse response
         )
         {
             if (response.Success)

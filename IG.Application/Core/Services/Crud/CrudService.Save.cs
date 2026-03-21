@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Response;
 using IG.Application.Core.Request;
-using IG.Application.Domain.Entities;
+using IG.Application.Domain.Interfaces;
 
 namespace IG.Application.Services.Crud
 {
     public partial class CrudService<TEntity, PK, CreateReq, CreateRes, UpdateReq, UpdateRes>
         where CreateReq : BaseRequest
         where UpdateReq : BaseRequest
-        where TEntity : BaseEntity<PK>
+        where TEntity : class, IBaseEntity<PK>
     {
         protected const string CREATED_MESSAGE = "Registro guardado correctamente";
         protected const string UPDATED_MESSAGE = "Registro actualizado correctamente";
@@ -37,15 +37,16 @@ namespace IG.Application.Services.Crud
             }
             catch (Exception ex)
             {
-                return (
-                    new Response<CreateRes>
-                    {
-                        Success = false,
-                        Message = "Error al crear registro",
-                        ServerMessage = ex.Message,
-                    },
-                    null
-                );
+                throw new Exception(ex.Message, ex);
+                //return (
+                //    new Response<CreateRes>
+                //    {
+                //        Success = false,
+                //        Message = "Error al crear registro",
+                //        ServerMessage = ex.Message,
+                //    },
+                //    null
+                //);
             }
         }
 
@@ -85,15 +86,16 @@ namespace IG.Application.Services.Crud
             }
             catch (Exception ex)
             {
-                return (
-                    new Response<UpdateRes>
-                    {
-                        Success = false,
-                        Message = "Error al actualizar",
-                        ServerMessage = ex.Message,
-                    },
-                    null
-                );
+                throw new Exception(ex.Message, ex);
+                //return (
+                //    new Response<UpdateRes>
+                //    {
+                //        Success = false,
+                //        Message = "Error al actualizar",
+                //        ServerMessage = ex.Message,
+                //    },
+                //    null
+                //);
             }
         }
 

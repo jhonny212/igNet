@@ -7,7 +7,6 @@ using AutoMapper;
 using Core.Response;
 using IG.Application.Core.Interfaces.Crud;
 using IG.Application.Core.Request;
-using IG.Application.Domain.Entities;
 using IG.Application.Domain.Interfaces;
 
 namespace IG.Application.Services.Crud
@@ -16,7 +15,7 @@ namespace IG.Application.Services.Crud
         : ICrudService<TEntity, PK, CreateReq, CreateRes, UpdateReq, UpdateRes>
         where CreateReq : BaseRequest
         where UpdateReq : BaseRequest
-        where TEntity : BaseEntity<PK>
+        where TEntity : class, IBaseEntity<PK>
     {
         protected readonly IRepository<TEntity, PK> _repository;
         protected readonly IMapper _mapper;

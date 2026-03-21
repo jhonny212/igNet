@@ -12,7 +12,7 @@ namespace IG.Application.Infraestructure.Persistence.Extensions
         public static IQueryable<T> WhereSearch<T>(
             this IQueryable<T> query,
             string? searchTerm,
-            params Expression<Func<T, string>>[] columns
+            params Expression<Func<T, string?>>[] columns
         )
             where T : class
         {

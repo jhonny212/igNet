@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "D:\\Freelancer\\IgNet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|d:\\freelancer\\ignet\\ig.application\\infraestructure\\configuration\\baseentityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|solutionrelative:ig.application\\infraestructure\\configuration\\baseentityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|d:\\freelancer\\ignet\\ig.application\\ig.application.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|solutionrelative:ig.application\\ig.application.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|d:\\freelancer\\ignet\\ig.application\\core\\services\\crud\\crudservice.delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|solutionrelative:ig.application\\core\\services\\crud\\crudservice.delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|d:\\freelancer\\ignet\\ig.application\\core\\services\\crud\\crudservice.save.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|solutionrelative:ig.application\\core\\services\\crud\\crudservice.save.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|d:\\freelancer\\ignet\\ig.application\\core\\services\\crud\\crudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|solutionrelative:ig.application\\core\\services\\crud\\crudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|d:\\freelancer\\ignet\\ig.application\\infraestructure\\persistence\\extensions\\filterextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD94C01E-2F17-4A69-93FB-CF50856F195D}|IG.Application\\IG.Application.csproj|solutionrelative:ig.application\\infraestructure\\persistence\\extensions\\filterextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +35,65 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BaseEntityConfiguration.cs",
-              "DocumentMoniker": "D:\\Freelancer\\IgNet\\IG.Application\\Infraestructure\\Configuration\\BaseEntityConfiguration.cs",
-              "RelativeDocumentMoniker": "IG.Application\\Infraestructure\\Configuration\\BaseEntityConfiguration.cs",
-              "ToolTip": "D:\\Freelancer\\IgNet\\IG.Application\\Infraestructure\\Configuration\\BaseEntityConfiguration.cs",
-              "RelativeToolTip": "IG.Application\\Infraestructure\\Configuration\\BaseEntityConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Title": "IG.Application",
+              "DocumentMoniker": "D:\\Freelancer\\IgNet\\IG.Application\\IG.Application.csproj",
+              "RelativeDocumentMoniker": "IG.Application\\IG.Application.csproj",
+              "ToolTip": "D:\\Freelancer\\IgNet\\IG.Application\\IG.Application.csproj",
+              "RelativeToolTip": "IG.Application\\IG.Application.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-19T16:44:30.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CrudService.Delete.cs",
+              "DocumentMoniker": "D:\\Freelancer\\IgNet\\IG.Application\\Core\\Services\\Crud\\CrudService.Delete.cs",
+              "RelativeDocumentMoniker": "IG.Application\\Core\\Services\\Crud\\CrudService.Delete.cs",
+              "ToolTip": "D:\\Freelancer\\IgNet\\IG.Application\\Core\\Services\\Crud\\CrudService.Delete.cs",
+              "RelativeToolTip": "IG.Application\\Core\\Services\\Crud\\CrudService.Delete.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T01:14:49.719Z",
+              "WhenOpened": "2026-03-19T16:44:18.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CrudService.Save.cs",
+              "DocumentMoniker": "D:\\Freelancer\\IgNet\\IG.Application\\Core\\Services\\Crud\\CrudService.Save.cs",
+              "RelativeDocumentMoniker": "IG.Application\\Core\\Services\\Crud\\CrudService.Save.cs",
+              "ToolTip": "D:\\Freelancer\\IgNet\\IG.Application\\Core\\Services\\Crud\\CrudService.Save.cs",
+              "RelativeToolTip": "IG.Application\\Core\\Services\\Crud\\CrudService.Save.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAYwFgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T16:43:31.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CrudService.cs",
+              "DocumentMoniker": "D:\\Freelancer\\IgNet\\IG.Application\\Core\\Services\\Crud\\CrudService.cs",
+              "RelativeDocumentMoniker": "IG.Application\\Core\\Services\\Crud\\CrudService.cs",
+              "ToolTip": "D:\\Freelancer\\IgNet\\IG.Application\\Core\\Services\\Crud\\CrudService.cs",
+              "RelativeToolTip": "IG.Application\\Core\\Services\\Crud\\CrudService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T16:43:23.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FilterExtensions.cs",
+              "DocumentMoniker": "D:\\Freelancer\\IgNet\\IG.Application\\Infraestructure\\Persistence\\Extensions\\FilterExtensions.cs",
+              "RelativeDocumentMoniker": "IG.Application\\Infraestructure\\Persistence\\Extensions\\FilterExtensions.cs",
+              "ToolTip": "D:\\Freelancer\\IgNet\\IG.Application\\Infraestructure\\Persistence\\Extensions\\FilterExtensions.cs",
+              "RelativeToolTip": "IG.Application\\Infraestructure\\Persistence\\Extensions\\FilterExtensions.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwDMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T15:33:26.941Z",
               "EditorCaption": ""
             }
           ]
