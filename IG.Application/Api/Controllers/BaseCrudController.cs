@@ -43,43 +43,22 @@ namespace IG.Application.App.Controllers
         [HttpPost]
         public virtual async Task<IActionResult> Create([FromBody] CreateReq request)
         {
-            try
-            {
-                var result = await service.CreateAsync(request);
-                return this.HandleResult(result.Item1);
-            }
-            catch (Exception ex)
-            {
-                return this.ServerError(ex);
-            }
+            var result = await service.CreateAsync(request);
+            return this.HandleResult(result.Item1);
         }
 
         [HttpPut("{id}")]
         public virtual async Task<IActionResult> Update(PK id, [FromBody] UpdateReq request)
         {
-            try
-            {
-                var result = await service.UpdateAsync(id, request);
-                return this.HandleResult(result.Item1);
-            }
-            catch (Exception ex)
-            {
-                return this.ServerError(ex);
-            }
+            var result = await service.UpdateAsync(id, request);
+            return this.HandleResult(result.Item1);
         }
 
         [HttpDelete("{id}")]
         public virtual async Task<IActionResult> Delete(PK id)
         {
-            try
-            {
-                var result = await service.DeleteAsync(id);
-                return this.HandleResult(result);
-            }
-            catch (Exception ex)
-            {
-                return this.ServerError(ex);
-            }
+            var result = await service.DeleteAsync(id);
+            return this.HandleResult(result);
         }
     }
 }

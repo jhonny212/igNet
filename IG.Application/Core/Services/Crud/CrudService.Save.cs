@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Core.Response;
+using IG.Application.Core.Exceptions;
 using IG.Application.Core.Request;
 using IG.Application.Domain.Interfaces;
 
@@ -14,10 +15,6 @@ namespace IG.Application.Services.Crud
         where UpdateReq : BaseRequest
         where TEntity : class, IBaseEntity<PK>
     {
-        protected const string CREATED_MESSAGE = "Registro guardado correctamente";
-        protected const string UPDATED_MESSAGE = "Registro actualizado correctamente";
-        protected const string DELETED_MESSAGE = "Registro eliminado correctamente";
-
         public virtual async Task<(Response<CreateRes>, TEntity?)> CreateAsync(CreateReq request)
         {
             try
@@ -29,7 +26,7 @@ namespace IG.Application.Services.Crud
                     new Response<CreateRes>
                     {
                         Success = true,
-                        Message = CREATED_MESSAGE,
+                        Message = BuildCreatedMessage(),
                         Data = this.MapToCreateRes<CreateRes>(result),
                     },
                     result
@@ -37,16 +34,17 @@ namespace IG.Application.Services.Crud
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message, ex);
-                //return (
-                //    new Response<CreateRes>
-                //    {
-                //        Success = false,
-                //        Message = "Error al crear registro",
-                //        ServerMessage = ex.Message,
-                //    },
-                //    null
-                //);
+                if (ex is ExceptionIg)
+                {
+                    throw;
+                }
+
+                throw new ExceptionIg(
+                    message: $"Error al guardar {GetEntityDisplayName().ToLowerInvariant()}",
+                    entityName: GetEntityDisplayName(),
+                    operation: CREATE_OPERATION,
+                    innerException: ex
+                );
             }
         }
 
@@ -64,7 +62,7 @@ namespace IG.Application.Services.Crud
                         new Response<UpdateRes>
                         {
                             Success = false,
-                            Message = "Registro no encontrado",
+                            Message = BuildNotFoundMessage(),
                         },
                         null
                     );
@@ -78,7 +76,7 @@ namespace IG.Application.Services.Crud
                     new Response<UpdateRes>
                     {
                         Success = true,
-                        Message = UPDATED_MESSAGE,
+                        Message = BuildUpdatedMessage(),
                         Data = this.MapToCreateRes<UpdateRes>(entity),
                     },
                     entity
@@ -86,16 +84,17 @@ namespace IG.Application.Services.Crud
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message, ex);
-                //return (
-                //    new Response<UpdateRes>
-                //    {
-                //        Success = false,
-                //        Message = "Error al actualizar",
-                //        ServerMessage = ex.Message,
-                //    },
-                //    null
-                //);
+                if (ex is ExceptionIg)
+                {
+                    throw;
+                }
+
+                throw new ExceptionIg(
+                    message: $"Error al actualizar {GetEntityDisplayName().ToLowerInvariant()}",
+                    entityName: GetEntityDisplayName(),
+                    operation: UPDATE_OPERATION,
+                    innerException: ex
+                );
             }
         }
 

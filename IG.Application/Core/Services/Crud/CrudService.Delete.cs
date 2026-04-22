@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Core.Response;
+using IG.Application.Core.Exceptions;
 using IG.Application.Core.Request;
 using IG.Application.Domain.Interfaces;
 
@@ -14,7 +15,7 @@ namespace IG.Application.Services.Crud
         where UpdateReq : BaseRequest
         where TEntity : class, IBaseEntity<PK>
     {
-        public async Task<Response<bool>> DeleteAsync(
+        public virtual async Task<Response<bool>> DeleteAsync(
             PK id,
             bool safeDelete = false,
             string deletedBy = "SYSTEM"
@@ -26,20 +27,23 @@ namespace IG.Application.Services.Crud
                 return new Response<bool>
                 {
                     Success = true,
-                    Message = DELETED_MESSAGE,
+                    Message = BuildDeletedMessage(),
                     Data = true,
                 };
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message, ex);
-                //return new Response<bool>
-                //{
-                //    Success = false,
-                //    Message = "Error al eliminar",
-                //    ServerMessage = ex.Message,
-                //    Data = false,
-                //};
+                if (ex is ExceptionIg)
+                {
+                    throw;
+                }
+
+                throw new ExceptionIg(
+                    message: $"Error al eliminar {GetEntityDisplayName().ToLowerInvariant()}",
+                    entityName: GetEntityDisplayName(),
+                    operation: DELETE_OPERATION,
+                    innerException: ex
+                );
             }
         }
     }

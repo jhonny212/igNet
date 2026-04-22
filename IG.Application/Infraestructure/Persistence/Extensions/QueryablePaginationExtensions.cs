@@ -2,7 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Threading.Tasks;
+using IG.Application.Core.Attributes;
+using IG.Application.Core.Exceptions;
+using IG.Application.Core.Extensions;
 using IG.Application.Core.Interfaces;
 
 namespace IG.Application.Infraestructure.Persistence.Extensions
@@ -46,8 +50,10 @@ namespace IG.Application.Infraestructure.Persistence.Extensions
                         string.Equals(p.Name, propertyName, StringComparison.OrdinalIgnoreCase)
                     );
                 if (property == null)
-                    throw new ArgumentException(
-                        $"Property '{sortBy}' not found on type '{entityType.Name}'"
+                    throw new ExceptionIg(
+                        message: $"La propiedad '{sortBy}' no existe para ordenar {GetEntityDisplayName(entityType)}",
+                        entityName: GetEntityDisplayName(entityType),
+                        operation: "SORT"
                     );
                 propertyAccess = Expression.MakeMemberAccess(propertyAccess, property);
             }
@@ -86,6 +92,23 @@ namespace IG.Application.Infraestructure.Persistence.Extensions
         {
             var sortedQuery = query.ToSort(pageAndSort);
             return sortedQuery.ToPage(pageAndSort, out totalRecords, out totalPages);
+        }
+
+        private static string GetEntityDisplayName(Type entityType)
+        {
+            var entityAttribute = entityType.GetCustomAttribute<EntityDisplayNameAttribute>();
+            var entityName = entityAttribute?.Name;
+
+            if (string.IsNullOrWhiteSpace(entityName))
+            {
+                entityName = entityType.Name;
+                if (entityName.EndsWith("Entity", StringComparison.OrdinalIgnoreCase))
+                {
+                    entityName = entityName[..^"Entity".Length];
+                }
+            }
+
+            return entityName.UppercaseFirstWord();
         }
     }
 }

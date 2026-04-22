@@ -39,7 +39,7 @@ namespace IG.Application.Domain.Interfaces
             IPagedAndSort? paged = null,
             IEnumerable<Expression<Func<T, object>>>? includes = null,
             CancellationToken cancellationToken = default,
-            params Expression<Func<T, string>>[] columns
+            params Expression<Func<T, string?>>[] columns
         );
     }
 }
