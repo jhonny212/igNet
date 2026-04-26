@@ -10,6 +10,7 @@ namespace Core.Response
     {
         public bool Success { get; set; }
         public string Message { get; set; } = string.Empty;
+        public bool ShowMessage { get; set; } = true;
         public List<FluentError> Errors { get; set; } = new List<FluentError>();
     }
 }

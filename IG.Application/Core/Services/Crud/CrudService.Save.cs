@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Core.Response;
+﻿using Core.Response;
 using IG.Application.Core.Exceptions;
 using IG.Application.Core.Request;
 using IG.Application.Domain.Interfaces;
