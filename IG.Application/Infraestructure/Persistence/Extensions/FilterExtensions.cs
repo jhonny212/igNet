@@ -42,6 +42,45 @@ namespace IG.Application.Infraestructure.Persistence.Extensions
             return query.Where(predicate!);
         }
 
+        public static IQueryable<T> WhereEquals<T, TValue>(
+            this IQueryable<T> query,
+            TValue? value,
+            Expression<Func<T, TValue>> column
+        )
+            where T : class
+            where TValue : struct
+        {
+            if (!value.HasValue)
+                return query;
+
+            var parameter = column.Parameters[0];
+            var body = Expression.Equal(column.Body, Expression.Constant(value.Value, typeof(TValue)));
+            var lambda = Expression.Lambda<Func<T, bool>>(body, parameter);
+
+            return query.Where(lambda);
+        }
+
+        public static IQueryable<T> WhereEquals<T, TValue>(
+            this IQueryable<T> query,
+            TValue? value,
+            Expression<Func<T, TValue?>> column
+        )
+            where T : class
+            where TValue : struct
+        {
+            if (!value.HasValue)
+                return query;
+
+            var parameter = column.Parameters[0];
+            var body = Expression.Equal(
+                column.Body,
+                Expression.Convert(Expression.Constant(value.Value, typeof(TValue)), typeof(TValue?))
+            );
+            var lambda = Expression.Lambda<Func<T, bool>>(body, parameter);
+
+            return query.Where(lambda);
+        }
+
         private static Expression<Func<T, bool>> OrElse<T>(
             Expression<Func<T, bool>> expr1,
             Expression<Func<T, bool>> expr2
