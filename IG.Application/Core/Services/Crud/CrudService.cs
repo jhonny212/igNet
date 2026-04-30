@@ -8,16 +8,16 @@ using Core.Response;
 using IG.Application.Core.Attributes;
 using IG.Application.Core.Extensions;
 using IG.Application.Core.Interfaces.Crud;
-using IG.Application.Core.Request;
 using IG.Application.Domain.Interfaces;
 using System.Reflection;
+using IG.Application.Core.Interfaces;
 
 namespace IG.Application.Services.Crud
 {
     public partial class CrudService<TEntity, PK, CreateReq, CreateRes, UpdateReq, UpdateRes>
         : ICrudService<TEntity, PK, CreateReq, CreateRes, UpdateReq, UpdateRes>
-        where CreateReq : BaseRequest
-        where UpdateReq : BaseRequest
+        where CreateReq : IBaseRequest
+        where UpdateReq : IBaseRequest
         where TEntity : class, IBaseEntity<PK>
     {
         protected const string CREATE_OPERATION = "CREATE";

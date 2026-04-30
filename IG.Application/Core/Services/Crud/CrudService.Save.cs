@@ -1,13 +1,13 @@
 ﻿using Core.Response;
 using IG.Application.Core.Exceptions;
-using IG.Application.Core.Request;
+using IG.Application.Core.Interfaces;
 using IG.Application.Domain.Interfaces;
 
 namespace IG.Application.Services.Crud
 {
     public partial class CrudService<TEntity, PK, CreateReq, CreateRes, UpdateReq, UpdateRes>
-        where CreateReq : BaseRequest
-        where UpdateReq : BaseRequest
+        where CreateReq : IBaseRequest
+        where UpdateReq : IBaseRequest
         where TEntity : class, IBaseEntity<PK>
     {
         public virtual async Task<(Response<CreateRes>, TEntity?)> CreateAsync(CreateReq request)

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IG.Application.Core.Extensions;
+using IG.Application.Core.Interfaces;
 using IG.Application.Core.Interfaces.Crud;
-using IG.Application.Core.Request;
 using IG.Application.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,8 +20,8 @@ namespace IG.Application.App.Controllers
         UpdateReq,
         UpdateRes
     > : ControllerBase
-        where CreateReq : BaseRequest
-        where UpdateReq : BaseRequest
+        where CreateReq : IBaseRequest
+        where UpdateReq : IBaseRequest
         where TEntity : class, IBaseEntity<PK>
     {
         protected readonly ICrudService<
